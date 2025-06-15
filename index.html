@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocbio India - Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 10vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .old-english {
+            font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Times New Roman', serif;
+        }
+
+        .graph-container {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            width: 100%;
+            max-width: 1200px;
+            filter: blur(0px);
+        }
+
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .graph-line {
+            stroke-dasharray: 1500;
+            stroke-dashoffset: 1500;
+            animation: drawLine 2.5s ease-in-out forwards;
+        }
+
+        .graph-dot {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        .coming-soon {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease-out 1.5s forwards;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            color: #60a5fa;
+        }
+
+        .tagline {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease-out 2s forwards;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-text {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 2.5s forwards;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+@keyframes drawLine {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+@keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+@keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .instagram-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .instagram-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            transition: width 0.3s ease;
+        }
+
+        .instagram-text:hover::after {
+            width: 100%;
+        }
+
+@font-face {
+            font-family: 'Old English Text MT';
+            src: url('https://db.onlinewebfonts.com/t/3c2d434e83ad19a0fb4a8b8c9fcc5cda.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="w-full py-6 px-8 md:px-16 border-b border-gray-800">
+        <div class="old-english text-2xl md:text-4xl tracking-wider" style="letter-spacing: 0.05em;">
+            Nocbio India
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="relative w-full max-w-6xl mx-auto px-1">
+            <!-- Graph container with blur effect -->
+            <div class="graph-container mx-auto">
+                <svg width="100%" height="100%" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Grid lines -->
+                    <line x1="0" y1="100" x2="1000" y2="100" stroke="#333333" stroke-width="1" />
+                    <line x1="0" y1="200" x2="1000" y2="200" stroke="#333333" stroke-width="1" />
+                    <line x1="0" y1="300" x2="1000" y2="300" stroke="#333333" stroke-width="1" />
+                    <line x1="0" y1="400" x2="1000" y2="400" stroke="#333333" stroke-width="1" />
+                    <line x1="0" y1="500" x2="1000" y2="500" stroke="#333333" stroke-width="1" />
+
+                    <line x1="125" y1="0" x2="125" y2="600" stroke="#333333" stroke-width="1" />
+                    <line x1="250" y1="0" x2="250" y2="600" stroke="#333333" stroke-width="1" />
+                    <line x1="375" y1="0" x2="375" y2="600" stroke="#333333" stroke-width="1" />
+                    <line x1="500" y1="0" x2="500" y2="600" stroke="#333333" stroke-width="1" />
+                    <line x1="625" y1="0" x2="625" y2="600" stroke="#333333" stroke-width="1" />
+                    <line x1="750" y1="0" x2="750" y2="600" stroke="#333333" stroke-width="1" />
+                    <line x1="875" y1="0" x2="875" y2="600" stroke="#333333" stroke-width="1" />
+
+                    <!-- Graph line - Modified to go even more upward -->
+                    <path
+                        class="graph-line"
+                        d="M 0,500
+                        C 125,350 200,250 300,150
+                        S 450,80 500,120
+                        S 650,60 750,30
+                        S 875,10 1000,5"
+                        stroke="#4ade80"
+                        stroke-width="4"
+                        fill="none"
+                        />
+
+                    <!-- Gradient fill under the line -->
+                    <linearGradient id="graphGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#4ade80" stop-opacity="0.3" />
+                        <stop offset="100%" stop-color="#4ade80" stop-opacity="0" />
+                    </linearGradient>
+
+                    <path
+                        d="M 0,500
+                        C 125,350 200,250 300,150
+                        S 450,80 500,120
+                        S 650,60 750,30
+                        S 875,10 1000,5
+                        L 1000,600 L 0,600 Z"
+                        fill="url(#graphGradient)"
+                        />
+
+                    <!-- Data points -->
+                    <circle class="graph-dot" cx="0" cy="500" r="6" fill="#4ade80" style="animation-delay: 0.1s" />
+                    <circle class="graph-dot" cx="300" cy="150" r="6" fill="#4ade80" style="animation-delay: 0.7s" />
+                    <circle class="graph-dot" cx="500" cy="120" r="6" fill="#4ade80" style="animation-delay: 1.2s" />
+                    <circle class="graph-dot" cx="750" cy="30" r="6" fill="#4ade80" style="animation-delay: 1.7s" />
+                    <circle class="graph-dot" cx="1000" cy="5" r="6" fill="#4ade80" style="animation-delay: 2.2s" />
+                </svg>
+            </div>
+
+            <!-- Content overlay positioned on top of the graph -->
+            <div class="content-overlay">
+                <div class="text-center">
+                    <h1 class="coming-soon text-5xl md:text-7xl font-bold mb-6">COMING SOON!</h1>
+                    <p class="tagline text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto">
+                      India's Emerging Giant in Finance, Tech & Development</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+<!-- Footer -->
+<footer class="w-full py-6 px-8 md:px-16 border-t border-gray-800">
+    <div class="flex justify-end">
+        <p class="footer-text text-gray-400 font-light text-sm md:text-base">
+            Follow 
+            <a href="https://www.instagram.com/nocbio_india" target="_blank" rel="noopener noreferrer" class="instagram-text text-blue-400 hover:underline">
+                @nocbio_india
+            </a> 
+            on Instagram for latest updates
+        </p>
+    </div>
+</footer>
+    <script>
+        // Add animation delay to graph dots
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load Old English font as a fallback
+            const fontLink = document.createElement('link');
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap';
+            fontLink.rel = 'stylesheet';
+            document.head.appendChild(fontLink);
+
+            // Add subtle parallax effect on mouse move
+            document.addEventListener('mousemove', (e) => {
+                const graphContainer = document.querySelector('.graph-container');
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 120;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 120;
+
+                graphContainer.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
